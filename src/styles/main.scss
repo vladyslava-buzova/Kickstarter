@@ -2,6 +2,440 @@
 @import "fonts";
 @import "typography";
 
-body {
-  background: $c-gray;
+* {
+  box-sizing: border-box;
+}
+
+.page,
+li,
+ul,
+button,
+a,
+p,
+h1,
+h2,
+h4,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.body {
+  background: #f7f7f7;
+  width: 1194px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  color: #333;
+}
+
+.header {
+  margin-top: 35px;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__section {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 90px;
+    padding-bottom: 171px;
+  }
+
+  &__section-right {
+    max-width: 816px;
+    max-height: 464px;
+  }
+
+  &__section-left {
+    max-width: 378px;
+  }
+
+  &__title {
+    font-size: 62px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 78px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 276px;
+    font-style: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.logo {
+  max-width: 161px;
+}
+
+.img {
+  width: 100%;
+}
+
+.right {
+  display: flex;
+}
+
+.list {
+  display: flex;
+  margin-right: 47px;
+
+  &__item {
+    margin: 0 auto;
+    margin-right: 37px;
+    padding: 16px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
+
+.button {
+  outline: none;
+  padding: 16px;
+  width: 102px;
+  background-color: #333;
+  color: white;
+  border-style: none;
+  font-size: 12px;
+}
+
+.button:hover {
+  background-color: black;
+  transition: background-color 0.3s ease;
+}
+
+.disabled {
+  background-color: #d0d0d0;
+}
+
+// -----------  Main ------------
+
+.menu__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  &-item {
+    margin-right: 74px;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 15px;
+    transition: font-weight 0.3ms ease;
+
+    &:hover {
+      font-weight: 700;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+  }
+}
+
+.description {
+  display: flex;
+  margin-bottom: 170px;
+
+  &__item {
+    max-width: 276px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+
+    &-img {
+      margin-bottom: 34px;
+      height: 42px;
+    }
+
+    &-title {
+      margin-bottom: 52px;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 28px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &-2 {
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      color: #7c7c7c;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+    }
+
+    &__item:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    max-width: 846px;
+    width: 846px;
+    margin: 0 auto;
+
+    &-picture {
+      width: 100%;
+    }
+  }
+}
+// -------   section__aboutus ---------
+
+.section-aboutus {
+  padding-top: 170px;
+}
+
+.aboutus {
+  display: flex;
+  justify-content: space-between;
+
+  &__img {
+    max-width: 582px;
+    max-height: 388px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 56px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7c7c7c;
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #0db2b3;
+    padding-bottom: 5px;
+
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: #0db2b3;
+      width: 64.61px;
+      display: block;
+      margin-top: 5px;
+    }
+
+    &:hover::after {
+      transition: all 0.3s ease-in-out;
+      width: 128px;
+    }
+  }
+}
+
+.aboutus-wrap {
+  max-width: 582px;
+}
+
+.aboutus-2 {
+  margin-bottom: 165px;
+}
+// ------  testemonials ------
+
+.testemonials {
+  background-image: url(../images/Desctop/Vector.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 233px;
+  margin-bottom: 170px;
+  margin-top: 162px;
+  align-items: center;
+
+  &__text {
+    max-width: 786px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #333;
+    margin: 0 auto;
+    padding-top: 42px;
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    margin: 0 auto;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  &__position {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #7c7c7c;
+    text-align: center;
+  }
+}
+
+// ---- features------
+
+.features {
+  &__title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 30px;
+  }
+}
+
+.wrap {
+  width: 378px;
+}
+
+.wrap:first-child {
+  margin-right: 132px;
+}
+
+.features-box {
+  display: flex;
+  background-color: #d6ecec;
+  padding: 60px 102px 5px;
+  position: relative;
+
+  &__title {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 42px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #0c797a;
+  }
+
+  &__item {
+    list-style: inside;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__img {
+    max-width: 582px;
+    width: 582px;
+    height: 302px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    margin-top: 109px;
+    border-bottom: 1px solid transparent ;
+    //top: 0px;
+    //background-image: url(../images/Desctop/image9.png);
+    // background-blend-mode: darken;
+  }
+}
+
+// -------- contact ut
+
+.contact-us {
+  padding-top: 107px;
+  padding-bottom: 107px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 70px;
+    text-transform: uppercase;
+    color: #333;
+    max-width: 584px;
+    width: 584px;
+
+  }
+}
+
+.contact-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    max-width: 581px;
+    width: 581px;
+    height: 48px;
+    padding: 12px 36px ;
+    margin-bottom: 19px;
+    border: 1px solid #828282;
+  }
+
+  &__textarea {
+    max-width: 581px;
+    width: 581px;
+    height: 128px;
+    padding: 16px 36px  ;
+    margin-bottom: 30px;
+    border: 1px solid #828282;
+  }
+
+  &__button {
+    width: 123.66px;
+    padding: 17px 42px;
+    background: #0db2b3;
+    // left: 735.06px;
+    // top: 4800px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    float: left;
+    text-transform: uppercase;
+  }
 }

@@ -1,13 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <title>Title</title>
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
+  <body class="body">
+    <!-------- Header  --------->
+    <header class="header">
+      <nav class="header__nav">
+        <a href="#">
+          <img
+            src="./images/Vector.png"
+            alt="logo"
+            class="logo">
+        </a>
+
+        <div class="right">
+          <ul class="list">
+            <li class="list__item"><a href="#">Specs</a></li>
+            <li class="list__item"><a href="#">EN/UA</a></li>
+          </ul>
+
+          <button class="button">Buy</button>
+        </div>
+      </nav>
+
+      <section class="header__section">
+
+        <div class="header__section-left">
+          <h1 class="header__title">Futuristic Wireless Speaker</h1>
+          <p class="header__text">Luna’s performance is balanced and smooth in all frequency ranges which makes the music both naturally pleasant and distinctly more layered.</p>
+        </div>
+
+        <div class="header__section-right">
+          <img
+            src="./images/Desctop/a347db2baba6b808980fb0422ff7f7f2_original.png"
+            alt="a"
+            class="img">
+        </div>
+
+      </section>
+    </header>
+    <!-------- main  --------->
+    <main class="main">
+      <section class="section-menu">
+        <ul class="menu__list">
+          <li class="menu__list-item"><a href="#" >OUR STORY</a></li>
+          <li class="menu__list-item"><a href="#" >ABOUT US</a></li>
+          <li class="menu__list-item"><a href="#" >TECHNOLOGY</a></li>
+          <li class="menu__list-item"><a href="#" >FEATURES</a></li>
+          <li class="menu__list-item"><a href="#" >GET IN TOUCH</a></li>
+        </ul>
+
+        <ul class="description">
+          <li class="description__item">
+            <img
+              src="./images/icons/Vector.svg"
+              alt="a"
+              class="description__item-img">
+            <h4 class="description__item-title">Futuristic Design</h4>
+            <p class="description__item-text">
+              To give Luna a truly flawless look, we specifically picked aircraft grade aluminum as its material and adopted both three-dimensional stretch-bending technology and a high precision cold forging technique.
+            </p>
+          </li>
+
+          <li class="description__item">
+            <img
+              src="./images/icons/Vector-1.svg"
+              alt="a"
+              class="description__item-img">
+            <h4 class="description__item-title description__item-2">Tweeter Speaker System</h4>
+            <p class="description__item-text">To deliver a more layered sound performance better than a sole full-range speaker, our team equipped Luna with one more tweeter speaker responsible for high-frequency sound independently.</p>
+          </li>
+
+          <li class="description__item">
+            <img
+              src="./images/icons/Vector-2.svg"
+              alt="a"
+              class="description__item-img">
+            <h4 class="description__item-title">Multiroom System  </h4>
+            <p class="description__item-text">Luna is natively compatible with your home Wi-Fi. Set up multiple speakers in different rooms to expand your music experience into the entire house.  </p>
+          </li>
+
+          <li class="description__item">
+            <img
+              src="./images/icons/Vector-3.svg"
+              alt="a"
+              class="description__item-img">
+            <h4 class="description__item-title description__item-2">Intuitive Lighting System</h4>
+            <p class="description__item-text">
+              An intuitive user interface allows you to adjust the hue and saturation of color for lighting that fits any mood and situation.
+            </p>
+          </li>
+        </ul>
+
+        <div class="description__img">
+          <img
+            src="./images/Desctop/image 2.png"
+            alt="pic"
+            class="description__img-picture">
+        </div>
+      </section>
+      <!------ section -about us ------->
+      <section class="section-aboutus">
+        <div class="aboutus aboutus-2">
+          <img
+            src="./images/Desctop/2.png"
+            alt="a"
+            class="aboutus__img">
+
+          <div class="wrap">
+            <h2 class="aboutus__title">DESIGNED FOR THE FUTURE</h2>
+            <p class="aboutus__text">
+              In 2014, a group of geeky industrial designers  engineering veterans and acoustic experts formed crazybaby. This is a bunch of passionate people who are crazy enough to think they can challenge the industry with disruptive audio products.
+            </p>
+            <a
+              href="#"
+              target="_blank"
+              class="aboutus__link">
+                See more about us
+            </a>
+          </div>
+        </div>
+
+        <div class="aboutus aboutus-lower">
+          <div class="aboutus-wrap">
+            <h2 class="aboutus__title">Luna Eye </h2>
+            <p class="aboutus__text">
+              ILuna Eye is to the essence of this innovative light and audio system. It comprises an independent tweeter speaker, a light guiding component, a dome and a ring ornament.
+            </p>
+
+            <a
+              href="#"
+              target="_blank"
+              class="aboutus__link">
+                See more about us
+            </a>
+          </div>
+
+          <img
+            src="./images/Desctop/image 6.png"
+            alt="a"
+            class="aboutus__img"
+          >
+
+        </div>
+      </section>
+
+      <!---- testemonials ---->
+
+      <section class="testemonials">
+        <p class="testemonials__text">
+          It really took me by surprise honestly to have such full beautiful sound that coming out of this small compact device. And with the brush aluminum surface, it feels so familiar. Like my iPhone.
+        </p>
+        <img
+          src="./images/Desctop/Ellipse.png"
+          alt="man"
+          class="testemonials__img"
+        >
+
+        <p class="testemonials__name">Garrett Martin</p>
+        <p class="testemonials__position">Creative Director</p>
+      </section>
+
+      <!---- features  ------>
+
+      <section class="features">
+        <h2 class="features__title">FEATURES</h2>
+
+        <div class="features-box">
+          <div class="wrap">
+            <h3 class="features-box__title">Connectivity</h3>
+            <ul class="features-box__list">
+              <li class="features-box__item">Hands Free Wireless Audio</li>
+              <li class="features-box__item">Bluetooth 4.0 LE</li>
+              <li class="features-box__item">Wi-Fi 2.4 GHz (802.11 b/g/n)</li>
+              <li class="features-box__item">Smart Multiroom System Set Up</li>
+              <li class="features-box__item">Party Mode with 6.0 Units and above</li>
+              <li class="features-box__item">MESHNET Multi Speaker Network</li>
+            </ul>
+
+            <h3 class="features-box__title">Sound & Music</h3>
+            <ul class="features-box__list">
+              <li class="features-box__item">Feel-in-chest Base Power</li>
+              <li class="features-box__item">Lossless Digital Audio Transmission</li>
+              <li class="features-box__item">Easy & Stable Stereo Pairing</li>
+              <li class="features-box__item">Crisp and Clear High Frequency Sound</li>
+              <li class="features-box__item">Streams from Cloud Music and Local Library</li>
+              <li class="features-box__item">Auto Music from Last Song Stopped</li>
+            </ul>
+          </div>
+
+          <div class="wrap">
+            <h3 class="features-box__title">App Features</h3>
+            <ul class="features-box__list">
+              <li class="features-box__item">Customize Music Schedule</li>
+              <li class="features-box__item">Wake Up with Favorite Songs</li>
+              <li class="features-box__item">Home Detection Auto Wake Up</li>
+              <li class="features-box__item">Color Wheel </li>
+            </ul>
+
+            <img
+              src="./images/Desctop/image9.png"
+              alt="pic"
+              class="features-box__img">
+          </div>
+        </div>
+      </section>
+
+      <!---- contact us ---->
+
+      <section class="contact-us">
+        <div class="contact-wrap">
+          <h2 class="contact-us__title">DO YOU HAVE ANY QUESTIONS?</h2>
+
+          <form action="#" class="form">
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Your email">
+            <textarea
+              name="text"
+              id="text"
+              class="form__textarea"
+              placeholder="Your message...">
+            </textarea>
+            <button class="form__button button">send</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+
+
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
