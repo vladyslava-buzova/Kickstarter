@@ -98,7 +98,13 @@ li {
 
   &__section-right {
     max-width: 816px;
-    max-height: 464px;
+    // max-height: 464px;
+    // overflow: hidden;
+
+    @include onTablet {
+      max-width: 429px;
+      // height: 317px;
+    }
 
     @include onMobile {
       max-width: 320px;
@@ -149,14 +155,23 @@ li {
     }
   }
 }
+.header__img {
+  // width: 100%;
+
+  @include onTablet {
+    width: 100%;
+
+   }
+
+}
 
 .logo {
   max-width: 161px;
 }
 
-.img {
-  width: 100%;
-}
+// .img {
+//   width: 100%;
+// }
 
 .burger {
   display: none;
@@ -323,13 +338,20 @@ li {
   display: flex;
   justify-content: space-between;
 
+  // @include onTablet {
+  //   position: relative;
+  // }
+
   &__img {
     max-width: 582px;
+    width: 100%;
     max-height: 388px;
+    object-fit: cover;
 
     @include onTablet {
       max-width: 374px;
       height: 415px;
+      // position: absolute;
     }
   }
 
@@ -473,11 +495,43 @@ li {
   }
 }
 
+// .container:nth-child(1) {
+//   margin-right: 150px;
+
+// }
+
 .wrap {
-  width: 378px;
+  margin-bottom: 55px;
+
+  @include onTablet {
+    margin-bottom: 50px;
+  }
 }
 
-.wrap:first-child {
+.contain {
+  display: flex;
+  max-width: 762px;
+  width: 762px;
+  justify-content: space-between;
+
+  &:first-child {
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  @include onTablet {
+    display:flex;
+    flex-direction: column;
+    width: 600px;
+  }
+
+}
+
+// .wrap{
+// }
+
+.container:first-child {
   margin-right: 132px;
 
   @include onTablet {
@@ -492,9 +546,13 @@ li {
   position: relative;
 
   @include onTablet {
-    padding: 60px 90px;
-    height: 555px;
+    padding: 60px 90px 123px;
   }
+
+  // @include onTablet {
+  //   padding: 60px 90px;
+  //   height: 555px;
+  // }
 
   &__title {
     font-weight: 700;
@@ -524,18 +582,26 @@ li {
     @include onTablet {
       font-size: 14px;
       line-height: 21px;
+
+      &:last-child {
+        margin-bottom: 55px;
+
+        // @include onTablet {
+        //   margin-bottom: 50px;
+        // }
+      }
     }
 
-    &:last-child {
-      margin-bottom: 55px;
-    }
+    // &:last-child {
+    //   margin-bottom: 55px;
+
+    // }
   }
 
   &__img {
-    max-width: 582px;
-    // width: 582px;
-    // height: 302px;
-    right: 0;
+    max-width: 532px;
+    width: 100%;
+    right: 45px;
     bottom: 0;
     position: absolute;
     // margin-top: 109px;
@@ -544,9 +610,42 @@ li {
     @include onTablet {
       width: 435px;
       height: 226px;
+      right: 5px;
     }
   }
 }
+
+.slider {
+  display: none;
+
+  @include onTablet {
+    display: block;
+    width: 95px;
+  }
+
+}
+
+.arrows {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.pages{
+  text-align: center;
+
+  &_number {
+    font-size: 11px;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      font-size: 16px;
+      color: #0C797A;
+    }
+  }
+
+}
+
+
 
 .hide {
   @include onTablet {
