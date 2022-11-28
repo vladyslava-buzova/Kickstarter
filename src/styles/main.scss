@@ -155,15 +155,6 @@ li {
     }
   }
 }
-.header__img {
-  // width: 100%;
-
-  @include onTablet {
-    width: 100%;
-
-   }
-
-}
 
 .logo {
   max-width: 161px;
@@ -345,7 +336,7 @@ li {
   &__img {
     max-width: 582px;
     width: 100%;
-    max-height: 388px;
+    // max-height: 388px;
     object-fit: cover;
 
     @include onTablet {
@@ -369,15 +360,13 @@ li {
   }
 
   &__text {
-    font-weight: 400;
-    font-size: 16px;
+    // font-weight: 400;
+    // font-size: 16px;
     line-height: 24px;
     color: #7c7c7c;
     margin-bottom: 60px;
 
     @include onTablet {
-      font-weight: 400;
-      font-size: 16px;
       line-height: 24px;
       margin-bottom: 60px;
     }
@@ -411,7 +400,8 @@ li {
 
   @include onTablet {
     max-width: 340px;
-    margin-left: 20px;
+    width: 340px;
+    // margin-left: 20px;
   }
 }
 
@@ -420,7 +410,22 @@ li {
 
   @include onTablet {
     margin-bottom: 137px;
+    justify-content: space-between;
   }
+}
+
+.img_upper {
+  @include onTablet {
+    margin-left: -30px;
+  }
+
+}
+
+.img_down {
+  @include onTablet {
+    margin-right: -30px;
+  }
+
 }
 // ------  testemonials ------
 
