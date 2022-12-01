@@ -56,10 +56,30 @@ li {
   @include onTablet {
     width: 700px;
   }
+
+  @include onMobile {
+    width: 320px;
+  }
 }
 
 .header {
   margin-top: 35px;
+
+  &__img {
+    // width: 100%;
+    // height: auto;
+    // width: 818px;
+    @include onTablet {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    @include onMobile {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+  }
 
   &__nav {
     display: flex;
@@ -88,16 +108,17 @@ li {
       padding-bottom: 141px;
     }
 
-    @include onMobile() {
+    @include onMobile{
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-height: 656px;
+      // max-height: 656px;
     }
   }
 
   &__section-right {
     max-width: 816px;
+    width: 816px;
     // max-height: 464px;
     // overflow: hidden;
 
@@ -108,19 +129,26 @@ li {
 
     @include onMobile {
       max-width: 320px;
-      max-height: 332px;
-      z-index: 0;
+      width: 320px;
+      // max-height: 332px;
+      // z-index: 0;
+      order: 1;
     }
 
   }
+
+  // .header__img {
+  //   width: 100%;
+  // }
 
   &__section-left {
     max-width: 378px;
 
     @include onMobile {
       max-width: 260px;
-      max-height: 245px;
-      z-index: 1;
+      // max-height: 245px;
+      // z-index: 1;
+      order: 2;
     }
   }
 
@@ -442,6 +470,10 @@ li {
     margin: 137px 0 140px;
   }
 
+  @include onMobile {
+    width: 260px;
+  }
+
   &__text {
     max-width: 786px;
     font-weight: 700;
@@ -452,6 +484,12 @@ li {
     margin: 0 auto;
     padding-top: 42px;
     margin-bottom: 30px;
+
+    @include onMobile {
+      width:100%;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__img {
@@ -485,6 +523,17 @@ li {
 // ---- features------
 
 .features {
+
+  @include onTablet {
+    // padding: 60px 90px 123px;
+  }
+
+  @include onMobile {
+    padding: 32px 32px 0 32px;
+    background-color: #D6ECEC;
+    position: relative;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 56px;
@@ -497,6 +546,16 @@ li {
       font-size: 30px;
       line-height: 40px;
     }
+
+    @include onMobile {
+      font-size: 30px;
+      line-height: 40px;
+      margin-top: -100px;
+    }
+
+
+
+
   }
 }
 
@@ -505,13 +564,39 @@ li {
 
 // }
 
-.wrap {
+// .wrap {
+//   margin-bottom: 55px;
+
+//   @include onTablet {
+//     margin-bottom: 50px;
+//   }
+
+//   @include onMobile {
+//     margin-bottom: 0;
+//   }
+// }
+
+.wrap-features {
   margin-bottom: 55px;
 
   @include onTablet {
     margin-bottom: 50px;
   }
+
+  @include onMobile {
+    width: 100%;
+    // margin-bottom: 0;
+  }
+
+  &-pic {
+    @include onMobile {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
 }
+
 
 .contain {
   display: flex;
@@ -531,6 +616,16 @@ li {
     width: 600px;
   }
 
+  @include onMobile {
+    width: 260px;
+  }
+
+  // @include onMobile {
+  //   display:flex;
+  //   flex-direction: column;
+
+  // }
+
 }
 
 // .wrap{
@@ -544,6 +639,7 @@ li {
   }
 }
 
+
 .features-box {
   display: flex;
   background-color: #d6ecec;
@@ -552,6 +648,12 @@ li {
 
   @include onTablet {
     padding: 60px 90px 123px;
+    // padding: 0;
+  }
+
+  @include onMobile {
+    // width: 100%;
+    padding: 0;
   }
 
   // @include onTablet {
@@ -571,6 +673,11 @@ li {
       font-size: 18px;
       line-height: 22px;
     }
+
+    @include onMobile {
+      // width: 100%;
+      margin-top: 30px;
+    }
   }
 
   &__list {
@@ -578,12 +685,17 @@ li {
       width: 270px;
     }
 
+    @include onMobile {
+      margin-right: 0;
+      // position:static;
+    }
+
   }
 
   &__item {
     list-style: inside;
     margin-bottom: 10px;
-
+  
     @include onTablet {
       font-size: 14px;
       line-height: 21px;
@@ -591,9 +703,14 @@ li {
       &:last-child {
         margin-bottom: 55px;
 
-        // @include onTablet {
-        //   margin-bottom: 50px;
-        // }
+        @include onMobile {
+          margin-bottom: 0;
+          // position:static;
+        }
+
+        @include onTablet {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -614,10 +731,22 @@ li {
 
     @include onTablet {
       width: 435px;
-      height: 226px;
+      // height: 226px;
       right: 5px;
     }
+
+    @include onMobile {
+      width: 100%;
+      position:relative;
+    }
   }
+}
+
+.features-box__list {
+  @include onMobile {
+    margin-right: 0;
+  }
+
 }
 
 .slider {
@@ -626,6 +755,13 @@ li {
   @include onTablet {
     display: block;
     width: 95px;
+  }
+
+  @include onMobile {
+    // width: 93px;
+    margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
   }
 
 }
@@ -667,6 +803,10 @@ li {
     padding: 140px 0;
   }
 
+  @include onMobile {
+    padding: 90px 30px 113px;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 56px;
@@ -682,12 +822,21 @@ li {
       width: 339px;
     }
 
+    @include onMobile {
+      width: 100%;
+    }
+
+
   }
 }
 
 .contact-wrap {
   display: flex;
   justify-content: space-between;
+
+  @include onMobile {
+    flex-direction: column;
+  }
 }
 
 .form {
@@ -700,6 +849,10 @@ li {
     width: 340px;
   }
 
+  @include onMobile() {
+    width: 100%;
+  }
+
   &__input {
     // max-width: 581px;
     // width: 581px;
@@ -708,6 +861,10 @@ li {
     padding: 12px 36px ;
     margin-bottom: 19px;
     border: 1px solid #828282;
+
+    @include onMobile {
+      width: 100%;
+    }
   }
 
   &__textarea {
@@ -718,6 +875,10 @@ li {
     padding: 16px 36px  ;
     margin-bottom: 30px;
     border: 1px solid #828282;
+
+    @include onMobile {
+      width: 100%;
+    }
   }
 
   &__button {
